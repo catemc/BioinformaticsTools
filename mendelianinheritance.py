@@ -9,7 +9,7 @@ Original file is located at
 
 import scipy as scipy
 from scipy.special import comb
-def probability(k, m, n):
+def probability(k, m, n): #k = dominant homozygous, m = heterozygous, and n = recessive homozygous
   population_total = k + m + n
   combination_total = comb(population_total, 2)
   valid_combinations = comb(k, 2) + k*m + k*n + .5*m*n + .75*comb(m, 2)
